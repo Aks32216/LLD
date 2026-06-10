@@ -1,0 +1,11 @@
+# Compiled binaries
+*.o
+*.out
+a.out
+
+# Build artifacts (we use /tmp, but just in case)
+build/
+bin/
+
+# macOS
+.DS_Store

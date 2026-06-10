@@ -1,0 +1,32 @@
+{
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+
+  // Use clangd as the C++ language server (provides inline linting + autocomplete)
+  "clangd.path": "/usr/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders"
+  ],
+
+  // Disable the Microsoft C++ IntelliSense engine so clangd is the sole provider
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+
+  // Format using the .clang-format file in the workspace root
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnSave": true
+  },
+
+  "files.associations": {
+    "*.cpp": "cpp",
+    "*.h": "cpp",
+    "*.hpp": "cpp"
+  }
+}

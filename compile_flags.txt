@@ -1,0 +1,14 @@
+-std=c++17
+-Wall
+-Wextra
+-Wpedantic
+-Wshadow
+-Wnon-virtual-dtor
+-Wold-style-cast
+-Woverloaded-virtual
+-Wcast-align
+-Wunused
+-Wconversion
+-Wsign-conversion
+-Wdouble-promotion
+-Wformat=2
