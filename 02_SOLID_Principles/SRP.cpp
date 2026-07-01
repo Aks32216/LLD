@@ -1,10 +1,41 @@
 /**
- * Topic   : <topic name>
- * Concept : <what you're practicing>
+ * Topic   : SOLID Principles
+ * Concept : Single Responsibility Principle (SRP)
  *
- * Notes:
- *  - <key idea 1>
- *  - <key idea 2>
+ * Definition:
+ *  A class should have only ONE reason to change.
+ *  "Reason to change" = the stakeholder/actor whose requirement drives that change.
+ *
+ * The Problem — God Class:
+ *  OrderService was doing 4 unrelated jobs:
+ *    1. Inventory check
+ *    2. Order processing + ID generation
+ *    3. Inventory update
+ *    4. Email notification
+ *  Any change to email format, pricing logic, or stock rules forced touching
+ *  the same class — high coupling, hard to test, hard to reuse.
+ *
+ * The Fix — Split by responsibility:
+ *  - InventoryManager  → owns stock data; only changes if stock logic changes
+ *  - NotificationService → owns email format; only changes if comms method changes
+ *  - OrderProcessor    → owns the workflow; only changes if order flow changes
+ *  - Order             → owns order data shape; only changes if data model changes
+ *
+ * Key C++ detail — store collaborators as reference members:
+ *  If OrderProcessor stored InventoryManager by value, it would work on a copy
+ *  and the original inventory in main() would never see stock deductions.
+ *  Storing as InventoryManager& means OrderProcessor operates on the real object.
+ *  Side effect: reference members delete the copy-assignment operator — good,
+ *  because two processors sharing one inventory accidentally would be a bug.
+ *
+ * How to identify SRP violations:
+ *  - Class has methods that change for unrelated reasons
+ *  - Class name contains "And", "Manager", "Helper", "Service" doing too much
+ *  - Unit-testing one feature requires setting up unrelated dependencies
+ *
+ * SRP does NOT mean one method per class.
+ *  InventoryManager can have isItemAvailable() AND updateInventoryItem() —
+ *  both relate to the same responsibility (managing stock).
  */
 
 // ─── Driver ───────────────────────────────────────────────────────────────────
