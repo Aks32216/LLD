@@ -50,6 +50,23 @@ interface Payable{
     }
 }
 
+
+interface t1{
+    default void run(){
+        System.out.println("Running in t1");
+    }
+}
+
+interface t2{
+    default void run(){
+        System.out.println("Running in t2");
+    }
+}
+
+class test implements t2{
+
+}
+
 public class Interface {
     public static void main(String[] args) {
         Car c = new ElectricCarI();
