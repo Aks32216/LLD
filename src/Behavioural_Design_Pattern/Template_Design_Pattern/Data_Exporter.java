@@ -100,6 +100,27 @@ class PdfReportExporter extends AbstractReportExporter {
     }
 }
 
+class ExcelReportExporter extends AbstractReportExporter {
+    @Override
+    protected void writeHeader(ReportData data) {
+        System.out.println("Excel: [Sheet1] Row 1: " + data.getHeaders());
+    }
+
+    @Override
+    protected void writeDataRows(ReportData data) {
+        int rowNum = 2;
+        for (Map<String, Object> row : data.getRows()) {
+            System.out.println("Excel: [Sheet1] Row " + rowNum + ": " + row.values());
+            rowNum++;
+        }
+    }
+
+    @Override
+    protected void writeFooter(ReportData data) {
+        System.out.println("Excel: [Sheet1] Auto-fit columns, apply borders");
+    }
+}
+
 public class Data_Exporter {
     public static void main(String[] args) {
         ReportData data = new ReportData();
