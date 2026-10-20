@@ -80,7 +80,20 @@ public class Set_And_Maps {
         mp.put("Amish",1);
         mp.put("Anshuman",2);
 
-        System.out.println(mp.containsKey("Amish"));
+        System.out.println(mp.containsKey("Aditya"));
         System.out.println(mp.containsValue(3));
+        System.out.println(mp.size());
+        System.out.println(mp.isEmpty());
+        System.out.println(mp.get("Amish"));
+        System.out.println(mp.get("Aditya"));
+        System.out.println(mp.getOrDefault("Aditya",14));
+
+        for(String key:mp.keySet()){
+            System.out.println(key);
+        }
+
+        for(Map.Entry<String,Integer> e:mp.entrySet()){
+            System.out.println(e.getKey()+e.getValue());
+        }
     }
 }
