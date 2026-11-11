@@ -4,7 +4,7 @@ import Game_Question_Practice.Snake_And_Ladder.Enums.GameStatus;
 import Game_Question_Practice.Snake_And_Ladder.Models.Board;
 import Game_Question_Practice.Snake_And_Ladder.Models.BoardEntity;
 import Game_Question_Practice.Snake_And_Ladder.Models.Dice;
-import Game_Question_Practice.Snake_And_Ladder.Player;
+import Game_Question_Practice.Snake_And_Ladder.Models.Player;
 
 import java.util.LinkedList;
 import java.util.List;

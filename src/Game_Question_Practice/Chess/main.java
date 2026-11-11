@@ -1,10 +1,13 @@
 package Game_Question_Practice.Chess;
 
 
+import Game_Question_Practice.Chess.Enums.Color;
 import Game_Question_Practice.Chess.Exception.ChessException;
+import Game_Question_Practice.Chess.Models.Move;
+import Game_Question_Practice.Chess.Models.Player;
+import Game_Question_Practice.Chess.Models.Position;
+import Game_Question_Practice.Chess.Service.Game;
 
-import javax.swing.text.Position;
-import java.awt.*;
 
 public class main {
     public static void main(String[] args) {
