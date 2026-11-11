@@ -1,6 +1,6 @@
-package Game_Question_Practice.Snake_And_Ladder;
+package Game_Question_Practice.Snake_And_Ladder.Models;
 
-class Dice {
+public class Dice {
     private final int minValue;
     private final int maxValue;
 

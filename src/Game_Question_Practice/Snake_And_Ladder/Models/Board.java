@@ -1,10 +1,10 @@
-package Game_Question_Practice.Snake_And_Ladder;
+package Game_Question_Practice.Snake_And_Ladder.Models;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Board {
+public class Board {
     private final int size;
     private final Map<Integer, Integer> snakesAndLadders;
 

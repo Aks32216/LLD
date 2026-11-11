@@ -1,5 +1,7 @@
 package Structural_Design_Pattern.Bridge_Design_Pattern;
 
+
+// this is implementation, as it performs the action
 interface Device{
     boolean isEnabled();
     void enable();
@@ -66,6 +68,8 @@ class Radio implements Device {
     }
 }
 
+
+// this is abstraction
 abstract class Remote{
     protected Device device;
 

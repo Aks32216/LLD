@@ -1,6 +1,6 @@
-package Game_Question_Practice.Snake_And_Ladder;
+package Game_Question_Practice.Snake_And_Ladder.Models;
 
-class Player {
+public class Player {
     private final String name;
     private int position;
 

@@ -1,6 +1,6 @@
-package Game_Question_Practice.Snake_And_Ladder;
+package Game_Question_Practice.Snake_And_Ladder.Models;
 
-abstract class BoardEntity {
+public abstract class BoardEntity {
     private final int start;
     private final int end;
 
@@ -18,7 +18,7 @@ abstract class BoardEntity {
     }
 }
 
-class Ladder extends BoardEntity {
+public class Ladder extends BoardEntity {
     public Ladder(int start, int end) {
         super(start, end);
         if (start >= end) {
@@ -29,7 +29,7 @@ class Ladder extends BoardEntity {
     }
 }
 
-class Snake extends BoardEntity {
+public class Snake extends BoardEntity {
     public Snake(int start, int end) {
         super(start, end);
         if (start <= end) {

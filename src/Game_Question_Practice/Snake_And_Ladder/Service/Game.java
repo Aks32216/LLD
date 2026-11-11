@@ -1,10 +1,16 @@
-package Game_Question_Practice.Snake_And_Ladder;
+package Game_Question_Practice.Snake_And_Ladder.Service;
+
+import Game_Question_Practice.Snake_And_Ladder.Enums.GameStatus;
+import Game_Question_Practice.Snake_And_Ladder.Models.Board;
+import Game_Question_Practice.Snake_And_Ladder.Models.BoardEntity;
+import Game_Question_Practice.Snake_And_Ladder.Models.Dice;
+import Game_Question_Practice.Snake_And_Ladder.Player;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-class Game {
+public class Game {
     private final Board board;
     private final Queue<Player> players;
     private final Dice dice;
