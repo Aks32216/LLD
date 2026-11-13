@@ -5,6 +5,9 @@ import DataStructureAndSearch.BloomFilters.Models.BloomFilterConfig;
 import DataStructureAndSearch.BloomFilters.Strategies.HashStrategy;
 import DataStructureAndSearch.BloomFilters.Strategies.MurmurHashStrategy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BloomFilter {
     private final BloomFilterConfig config;
     private final BitArray bitArray;
@@ -31,6 +34,7 @@ public class BloomFilter {
             int position=hashStrategy.hash(element,i,bitArraySize);
             bitArray.set(position);
         }
+        Map<Integer,Integer> mp=new HashMap<>();
     }
 
     // Synchronized to ensure consistent reads across all k positions
